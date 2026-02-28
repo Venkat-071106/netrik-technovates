@@ -1,4 +1,5 @@
 from agent.ingestion import BacklogIngestionEngine
+from agent.summary import SummaryGenerator
 
 engine = BacklogIngestionEngine()
 
@@ -12,3 +13,9 @@ assign_engine = ResourceAssignmentEngine()
 assignments = assign_engine.assign(tickets)
 
 print(assignments)
+
+summary_engine = SummaryGenerator()
+summary = summary_engine.generate(tickets)
+
+print("\n--- SPRINT SUMMARY ---")
+print(summary)

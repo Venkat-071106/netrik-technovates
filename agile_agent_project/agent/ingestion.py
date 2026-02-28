@@ -21,7 +21,8 @@ class BacklogIngestionEngine:
                 "id": str(row.get("id", "")),
                 "title": str(row.get("title", "")),
                 "description": str(row.get("description", "")),
-                "status": str(row.get("status", "todo"))
+                "status": str(row.get("status", "todo")),
+                "depends_on": []
             }
 
             tickets.append(ticket)
